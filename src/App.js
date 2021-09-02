@@ -60,13 +60,6 @@ function App() {
         
   };
 
-    //  console.log(cardList);
-    sessionStorage.setItem("list",JSON.stringify(cardList));
-
-    const [cardListUpdated, setCardListUpdated] = useState(JSON.parse( sessionStorage.getItem("list")));
-    setCardListUpdated(JSON.parse( sessionStorage.getItem("list")));
-    console.log(cardListUpdated[0])
-
     return (
     <div>
      
@@ -80,7 +73,7 @@ function App() {
         <div className="bg-blue-50 h-screen" >
             <div className="font-semibold text-gray-700 text-lg p-3 text-center">Column 1</div>
             <hr/>
-        { cardListUpdated[0].map((item,id) => { 
+        { cardList.map((item,id) => { 
                 if( item.column === '1'){
                     return <div key={id} className="shadow-md rounded-lg bg-white m-4" >
                             <div className="font-semibold text-gray-600 px-3 py-2">{item.title}</div>
@@ -93,7 +86,7 @@ function App() {
         <div className="bg-green-50 h-screen" >
             <div className="font-semibold text-gray-700 text-lg p-3 text-center">Column 2</div>
             <hr/>
-        { cardListUpdated[0].map((item,id) => { 
+        { cardList.map((item,id) => { 
                 if( item.column === '2'){
                     return <div key={id} className="shadow-md rounded-lg bg-white m-4" >
                             <div className="font-semibold text-gray-600 px-3 py-2">{item.title}</div>
@@ -107,7 +100,7 @@ function App() {
         <div className="bg-indigo-50 h-screen" >
             <div className="font-semibold text-gray-700 text-lg p-3 text-center">Column 3</div>
             <hr/>
-        { cardListUpdated[0].map((item,id) => { 
+        { cardList.map((item,id) => { 
                 if( item.column === '3'){
                     return <div key={id} className="shadow-md rounded-lg bg-white m-4" >
                             <div className="font-semibold text-gray-600 px-3 py-2">{item.title}</div>

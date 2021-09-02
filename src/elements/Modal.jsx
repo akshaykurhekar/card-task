@@ -12,10 +12,10 @@ const Modal = ({ show, cancel, save,children, }) => {
             <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
               <h3 className="text-3xl text-gray-700 font-semibold">{"Generate card"}</h3>
               <div className="flex space-x-4" >
-                <button className=" px-6 py-2 btn-default" onClick={cancel}>
+                <button className="px-3 py-1 rounded-md bg-indigo-500 border-2 border-blue-600 hover:bg-white hover:text-blue-800 text-white" onClick={cancel}>
                   Cancel
                 </button>
-                <button className="px-6 py-2 btn-default" onClick={save}>
+                <button className="px-3 py-1 rounded-md bg-indigo-500 border-2 border-blue-600 hover:bg-white hover:text-blue-800 text-white" onClick={save}>
                   Save
                 </button>
               </div>
